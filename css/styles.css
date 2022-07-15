@@ -199,6 +199,22 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
    }
 
+   .header-item-blue {
+       color: var(--secondary-color);
+   }
+
+   .header-item-blue:hover {
+       color: var(--secondary-color);
+   }
+
+   .header-item {
+    color: var(--small-section-title-color);
+   }
+
+   .header-item:hover{
+    color: var(--secondary-color);
+   }
+
                                                  /* body*/
 
 .body{
@@ -284,15 +300,6 @@ transition-property: fill, backgroud-color;
 }
     
 
-.button:hover {
-    color: var(--minor-color);
-    background-color: transparent;
-}
-
-.button:focus {
-    color: var(--minor-color);
-    background-color: var(--secondary-color);
-}
 
                                          /* section-two*/
 
@@ -415,6 +422,52 @@ background-image: url(../images/icons/Group3.svg);
 margin-right:0;
 }
 
+
+.picture-first-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    padding-left: 83px;
+    padding-top: 27px;
+    padding-right: 83px;
+    padding-bottom: 27px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--minor-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    opacity: 0.8;
+}
+
+.picture-first {
+    position: relative;
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    transform: scale(1);
+    transition: trasform 0.5s;
+
+
+}
+
                                   /* section-four*/
 .section-four{
     background-color: var(--team-background-color);
@@ -501,6 +554,7 @@ margin-bottom: 16px;
     color: var(--secondary-color);
 }
 
+
 .item-title{
     font-weight: 700;
     font-size: 18px;
@@ -558,7 +612,7 @@ transition-delay: none;
 display: flex;
 width: 44px;
 height: 44px;
-border: 1px solid var(--minor-color);
+
 border-radius: 100%;
 color: var(--icon-social-color);
     background-color: var(--minor-color);
@@ -791,7 +845,7 @@ margin-right: 0;
     
     }
 
-    .project-section-information{
+    .project-section-information {
        position: absolute;
         top: 0;
         left: 0; 
@@ -826,8 +880,15 @@ background-color: var(--secondary-color);
 
     .project-section{
       position: relative; 
-       
+            }
+    
+    .relative{
+        position: relative;
     }
+
+      
+
+      
 
     .flex-element:hover .project-section-information{
     transform: translateY(0);
@@ -903,11 +964,6 @@ flex-wrap: wrap;
     }
 .buttons{
     margin: bottom 34px; ;
-}
-.menu {
-    
-    
-    
 }
 
 
@@ -989,7 +1045,7 @@ text-align: center;
     height: 20px;
     border-radius: 30%;
     fill: var(--minor-color);
-    background-color:var(--icon-footer-background-color);
+    
     transition-property:background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -997,14 +1053,10 @@ text-align: center;
 }
 .icon-footer:hover,
 .icon-footer:focus {
-    fill: var(--secondary-color);
-}
-        
-.icon-footer:hover,
-.icon-footer:focus {
-                    background-color: var(--secondary-color)
-                }
-
+    color: var(--secondary-color);
+    fill: var(--minor-color);
+    }
+ 
 strong.title-footer{
     flex-wrap: wrap;
 }
@@ -1061,13 +1113,13 @@ strong.title-footer{
                
         .backdrop{
             position: fixed;
+            z-index: 20;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color:rgba(0, 0, 0, 0.2);
-            z-index: 20;
-            transform: scale(1);
+                        transform: scale(1);
             
         
         }
@@ -1105,3 +1157,7 @@ strong.title-footer{
             pointer-events: none;
 
          }     
+
+                 .backdrop.is-hidden{
+                    transition: opasity 1.5s, visibility 1.5s ;
+                 }

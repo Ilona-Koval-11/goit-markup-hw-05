@@ -45,6 +45,63 @@ width: 370px;
         }
         
 
+ДОДАТИ
+
+.picture-first-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    padding-left: 83px;
+    padding-top: 27px;
+    padding-right: 83px;
+    padding-bottom: 27px ;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--minor-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+  
+    opacity: 0.8;
+}
+    
+  .picture-first {
+        position: relative;
+    }
+
+
+    .backdrop{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            transform: scale(1);
+            transition: trasform 0.5s;
+            
+        
+        }
 
 
 
+видалити
+
+.button:hover {
+    color: var(--minor-color);
+    background-color: transparent;
+}
+
+.button:focus {
+    color: var(--minor-color);
+    background-color: var(--secondary-color);
+}
